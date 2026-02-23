@@ -1,0 +1,9 @@
+streamlit
+langchain
+langchain-community
+transformers
+torch
+torchvision
+pillow
+accelerate
+sentencepiece
