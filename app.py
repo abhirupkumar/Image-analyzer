@@ -30,7 +30,6 @@ if "image_base64" not in st.session_state:
 
 # Sidebar for image upload
 uploaded_file = st.sidebar.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])
-thinking_mode = st.sidebar.toggle("Thinking Mode", value=False)
 
 if uploaded_file:
     st.sidebar.image(uploaded_file)
@@ -49,7 +48,6 @@ if uploaded_file:
 llm = ChatGoogleGenerativeAI(
     model="gemini-3-flash-preview",
     google_api_key=api_key,
-    thinking_budget=-1 if thinking_mode else 0
 )
 
 # Display chat history
