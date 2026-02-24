@@ -81,9 +81,6 @@ if user_query:
     with st.chat_message("user"):
         st.write(user_query)
 
-    # Construct the content block containing both text and the image.
-    # We include the image in EVERY human message so the model always 
-    # has the visual context, even as the conversation gets longer.
     content = [
         {"type": "text", "text": user_query},
         {
